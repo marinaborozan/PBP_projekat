@@ -2,7 +2,18 @@ LUKA ZA TERETNJAKE
 
 OPIS:
 
-U luci za teretnjake se nalazi vise Pristanista. Svako pPristaniste ima kapacitet(max broj brodova koji se mogu usidriti u njemu) i poziciju na kojoj se nalazi u luci. Svaki Brod je usidren na tacno jednom pristanistu. Svaki Brod ima naziv, kapacitet(max tezinu koju moze podneti u kg), dimenzije,kao i svoju rezervu - Brod koji prevozi umesto njega ukoliko iz nekog razloga on nije u mogucnosti(rekurzija). Linija se odlikuje destinacijom na koju prevozi i kilometrazom. Jedan Brod moze prevoziti na jednoj ili vise Linija - entitet Voznja. Kapetan se odlikuje imenom i staroscu. Jedan Kapetan moze upravljati jednim ili vise Brodova, a moze nijednim, ukoliko ne radi tada. Prati se vreme pocetka i zavrsetka upravljanja kako bi se znalo kad je Kapetan slobodan,kao i kada je dati Brod slobodan - entitet Upravlja. Teret se odlikuje dimenzijama, tezinom, destinacijom. Vec unet Teret u bazi se rasporedjuje na odredjene Voznje u zavisnosti od destinacije. Postoji i Specijalan_teret koji se odlikuje vrstom(osetljiv/skupocen), zastitom(osetljiv), osiguranjem(skupocen), si ostali spadaju u regularan teret. 
+U luci za teretnjake se nalazi vise Pristanista. 
+Svako Pristaniste ima kapacitet(max broj brodova koji se mogu usidriti u njemu) i poziciju na kojoj se nalazi u luci. 
+Svaki Brod je usidren na tacno jednom Pristanistu. 
+Svaki Brod ima naziv, kapacitet(max tezinu koju moze podneti u kg), dimenzije,kao i svoju rezervu - Brod koji prevozi umesto njega ukoliko iz nekog razloga on nije u mogucnosti(rekurzija). 
+Linija se odlikuje destinacijom na koju prevozi i kilometrazom. 
+Jedan Brod moze prevoziti na jednoj ili vise Linija - entitet Voznja. 
+Kapetan se odlikuje imenom i staroscu. 
+Jedan Kapetan moze upravljati jednim ili vise Brodova, a moze nijednim, ukoliko ne radi tada. 
+Prati se vreme pocetka i zavrsetka upravljanja kako bi se znalo kad je Kapetan slobodan,kao i kada je dati Brod slobodan - entitet Upravlja. 
+Teret se odlikuje dimenzijama, tezinom, destinacijom. 
+Vec unet Teret u bazi se rasporedjuje na odredjene Voznje u zavisnosti od destinacije. 
+Postoji i Specijalan_teret koji se odlikuje vrstom(osetljiv/skupocen), zastitom(osetljiv), osiguranjem(skupocen), svi ostali spadaju u regularan teret. 
 
 nezavisni entiteti:
 1.Brod
@@ -23,4 +34,4 @@ rekurzivni odnos:
 
 trigeri:
 1.bu_Teret (update za Teret) - provera da li je tezina tereta veca od max kapaciteta svih brodova
-4.bi_upravlja - provera da li su kapetan i brod slobodni u datom periodu
+4.bi_Upravlja - provera da li su kapetan i brod slobodni u datom periodu
